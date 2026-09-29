@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo de Listas em HTML</title>
+  </head>
+  <body>
+    <h1 id="titulo">Rotina de Estudo</h1>
+
+    <!-- 1. Lista Não Ordenada (Itens onde a ordem não importa) -->
+    <h2>Dias da Semana</h2>
+    <ul>
+      <li>Segunda</li>
+      <li>Quinta</li>
+      <li>Sexta</li>
+      <li>Sábado</li>
+    </ul>
+
+    <!-- 2. Lista Ordenada (Passo a passo com sequência obrigatória) -->
+    <h2>Entender sobre</h2>
+    <ol>
+      <li>Orientação à Objetos.</li>
+      <li>Classes e Objetos.</li>
+      <li>Herança.</li>
+      <li>Polimorfismo.</li>
+      <li>Encapsulamento.</li>
+    </ol>
+
+    <!-- 3. Lista de Definição (Termos e suas descrições ou glossário) -->
+    <h2>Definições</h2>
+    <dl>
+      <dt>Herança</dt>
+      <dd>
+        É a capacidade de uma classe (filha/subclasse) herdar características e
+        comportamentos de outra classe (pai/superclasse)
+      </dd>
+
+      <dt>Polimorfismo</dt>
+      <dd>
+        É a capacidade de um mesmo método se comportar de maneiras diferentes
+        dependendo do objeto que o está chamando.
+      </dd>
+
+      <dt>Encapsulamento</dt>
+      <dd>
+        É a ideia de esconder os detalhes internos de funcionamento de um objeto
+        e expor apenas o que é necessário.
+      </dd>
+    </dl>
+
+    <!-- 4. Tabela -->
+    <h1>Painel de Atividades da Turma</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dia da Semana</th>
+          <th colspan="2">Período de Aulas</th>
+          <!-- colspan="2": Ocupa duas colunas -->
+          <th>Responsável</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Segunda-feira</td>
+          <!-- rowspan="2": Ocupa duas linhas -->
+          <td>08:00 - 09:30</td>
+          <td>Arquitetura Web</td>
+          <td>Prof. Huilson</td>
+        </tr>
+        <tr>
+          <td>09:40 - 11:10</td>
+          <td>Programação HTML</td>
+          <td>Prof. Huilson</td>
+        </tr>
+        <tr>
+          <td>Terça-feira</td>
+          <td colspan="2">Atendimento aos Alunos (Período Integral)</td>
+          <!-- colspan="2": Mescla as colunas de horário e disciplina -->
+          <td>Coordenação</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 5. Formulário -->
+    <h1>Registo de Utilizador e Inquérito</h1>
+
+    <!-- A tag <form> define o início do formulário, apontando o destino e o método HTTP -->
+    <form action="processar_dados.php" method="POST">
+      <!-- Input de Texto Simples -->
+      <div>
+        <label for="nome">Nome Completo:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite o seu nome"
+          required
+        />
+      </div>
+
+      <!-- Input de E-mail -->
+      <div>
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemplo@dominio.com"
+          required
+        />
+      </div>
+
+      <!-- Input de Palavra-passe -->
+      <div>
+        <label for="senha">Palavra-passe:</label>
+        <input type="password" id="senha" name="senha" required />
+      </div>
+
+      <!-- Radio Buttons (Escolha Exclusiva) -->
+      <div>
+        <label>Turno de Estudo:</label>
+        <input type="radio" id="turno-matutino" name="turno" value="matutino" />
+        <label for="turno-matutino" style="display: inline; font-weight: normal"
+          >Matutino</label
+        >
+
+        <input
+          type="radio"
+          id="turno-noturno"
+          name="turno"
+          value="noturno"
+          checked
+        />
+        <label for="turno-noturno" style="display: inline; font-weight: normal"
+          >Noturno</label
+        >
+      </div>
+
+      <!-- Checkboxes (Múltipla Escolha) -->
+      <div>
+        <label>Interesses Tecnológicos:</label>
+        <input type="checkbox" id="int-html" name="interesses[]" value="html" />
+        <label for="int-html" style="display: inline; font-weight: normal"
+          >HTML & CSS</label
+        ><br />
+
+        <input type="checkbox" id="int-js" name="interesses[]" value="js" />
+        <label for="int-js" style="display: inline; font-weight: normal"
+          >JavaScript</label
+        ><br />
+
+        <input type="checkbox" id="int-php" name="interesses[]" value="php" />
+        <label for="int-php" style="display: inline; font-weight: normal"
+          >PHP</label
+        >
+      </div>
+
+      <!-- Lista Suspensa (<select> e <option>) -->
+      <div>
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso">
+          <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+          <option value="es">Engenharia de Software</option>
+          <option value="cc">Ciência da Computação</option>
+        </select>
+      </div>
+
+      <!-- Área de Texto Multilinha (<textarea>) -->
+      <div>
+        <label for="mensagem">Mensagem / Observações:</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          rows="4"
+          placeholder="Escreva aqui a sua mensagem..."
+        ></textarea>
+      </div>
+
+      <!-- Botão de Envio (Submit) -->
+      <div>
+        <input type="submit" value="Enviar Dados" />
+      </div>
+    </form>
+
+    <script>
+      let titulo = document.getElementById("titulo");
+      titulo.textContent = "Texto alterado via JavaScript!";
+    </script>
+  </body>
+</html>

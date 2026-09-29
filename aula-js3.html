@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo de Listas em HTML</title>
+  </head>
+  <body>
+    <button id="meuBotao">Mudar Cor</button>
+    <div id="caixa">Caixa de Conteúdo</div>
+
+    <script>
+      const botao = document.getElementById("meuBotao");
+      const caixa = document.getElementById("caixa");
+
+      botao.addEventListener("click", function () {
+        caixa.style.backgroundColor = "lightblue";
+        caixa.textContent = "Cor alterada via evento de clique!";
+      });
+    </script>
+  </body>
+</html>

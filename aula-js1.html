@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aula 15 - Expressões, Operadores e Instruções</title>
+  </head>
+  <body>
+    <h1>Avaliação de Desempenho do Estudante</h1>
+    <p>
+      Abra a Consola do Desenvolvedor (pressionando <strong>F12</strong> ou
+      <em>Ctrl + Shift + J</em>) para visualizar os resultados dos cálculos e
+      operadores do JavaScript.
+    </p>
+
+    <!-- Script JavaScript incorporado para demonstração -->
+    <script>
+      let nota1 = 8.5;
+      let nota2 = 6.0;
+      let notaTrabalho = 7.0;
+
+      let mediaFinal = nota1 * 0.4 + nota2 * 0.4 + notaTrabalho * 0.2;
+      console.log("Média Calculada: " + mediaFinal);
+
+      let frequenciaAulas = 80;
+      let presencaMinima = 75;
+
+      let aprovadoPorNota = mediaFinal >= 7.0;
+      let aprovadoPorFrequencia = frequenciaAulas >= presencaMinima;
+
+      let statusAprovadoGeral = aprovadoPorNota && aprovadoPorFrequencia;
+
+      console.log("Aprovado por nota? " + aprovadoPorNota);
+      console.log("Aprovado por frequência? " + aprovadoPorFrequencia);
+      console.log("Situação final de aprovação: " + statusAprovadoGeral);
+
+      let totalPontosBonus = 5;
+      totalPontosBonus += 2;
+
+      console.log("Total de pontos bónus atualizado: " + totalPontosBonus);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aula 16 - Controlo de Fluxo: Condicionais e Repetições</title>
+  </head>
+  <body>
+    <h1>Demonstração de Controlo de Fluxo em JavaScript</h1>
+    <p>
+      Abra a Consola do Desenvolvedor (pressionando <strong>F12</strong>) para
+      ver a execução detalhada dos blocos de código.
+    </p>
+
+    <script>
+      // ==========================================
+      // 1. ESTRUTURAS CONDICIONAIS (if / else if / else)
+      // ==========================================
+      console.log("--- 1. TESTE DE CONDICIONAL (if/else) ---");
+      let pontos = 85;
+
+      if (pontos >= 90) {
+        console.log("Acima da média.");
+      } else if (pontos >= 70) {
+        console.log("Na média.");
+      } else {
+        console.log("Abaixo da média.");
+      }
+
+      // ==========================================
+      // 2. ESCOLHA MÚLTIPLA (switch)
+      // ==========================================
+      console.log("\n--- 2. TESTE DE ESCOLHA MÚLTIPLA (switch) ---");
+      let cargoSistema = "administrador";
+
+      switch (cargoSistema) {
+        case "aluno":
+          console.log("Perfil: Acesso restrito aos materiais de aula.");
+          break;
+        case "professor":
+          console.log("Perfil: Acesso para lançar notas e gerir conteúdos.");
+          break;
+        case "administrador":
+          console.log("Perfil: Acesso total ao sistema e bases de dados.");
+          break;
+        default:
+          console.log("Perfil desconhecido. Acesso negado.");
+          break;
+      }
+
+      // ==========================================
+      // 3. LAÇOS DE REPETIÇÃO (for)
+      // ==========================================
+      console.log("\n--- 3. TESTE DE LAÇO DE REPETIÇÃO (for) ---");
+      console.log("A simular contagem de 1 a 5:");
+
+      for (let i = 1; i <= 5; i++) {
+        console.log("Volta número: " + i);
+      }
+
+      // ==========================================
+      // 4. USO DE CONTINUE E BREAK NO CICLO
+      // ==========================================
+      console.log("\n--- 4. TESTE DE CONTINUE E BREAK ---");
+      console.log(
+        "A processar números de 1 a 10 (ignorando pares com continue e parando no 8 com break):",
+      );
+
+      for (let num = 1; num <= 10; num++) {
+        // Se o número for par, o 'continue' salta esta iteração e avança para a próxima
+        if (num % 2 === 0) {
+          continue;
+        }
+
+        // Se o número atingir o 8, o 'break' interrompe o ciclo por completo
+        if (num > 7) {
+          console.log("Limite de segurança atingido. A encerrar o ciclo.");
+          break;
+        }
+
+        console.log("Número ímpar processado: " + num);
+      }
+    </script>
+  </body>
+</html>
